@@ -14,15 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ke4wot:$(date +%s)
     - name: AI4EU Registry
-      uses: docker/ai4eu-action@v1 
+      uses: docker/login-action@v1
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build and Push to GitHub Container Registry
+    - name: Login to GitHub Container Registry
       uses: docker/build-push-action@v2
       with:
         context: .
