@@ -1,0 +1,4 @@
+Levenshtein
+gensim
+owlready2
+smart_open[http]
