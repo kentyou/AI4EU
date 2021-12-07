@@ -17,7 +17,7 @@ news_path = 'https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negat
 embeddings_index = KeyedVectors.load_word2vec_format(news_path, binary=True)
 
 
-def getSimilarTopicsFor(inputOntology, outputFile):
+def getSimilarTopicsFor(inputOntology):
 
 	try:
 		best_concepts = defaultdict(list)
@@ -55,18 +55,8 @@ def getSimilarTopicsFor(inputOntology, outputFile):
 			except Exception as ex:
 				print(f'exception: {topic} {ex}')
 
-
-		# f = open(outputFile, 'a')
-		# f.write("," + inputOntology + "\n")
-		# for x in best_concepts:
-		# 	f.write(str(x) + "," + str(best_concepts[x])[1:len(str(best_concepts[x])) - 1] + "\n")
-		# f.close()
 		print(json.dumps(best_concepts))
 		return json.dumps(best_concepts)
-		# with open(outputFile,'w') as convert_file:
-		# 	convert_file.write("," + inputOntology + "\n")
-		# 	for x in best_concepts:
-		# 		convert_file.write(str(x) + "," + str(best_concepts[x])[1:len(str(best_concepts[x])) - 1] + "\n")
 	except Exception as ex:
 		print(f'Exception in main {ex}')
 

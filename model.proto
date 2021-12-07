@@ -5,7 +5,6 @@ syntax = "proto3" ;
 
 message Features {
 string inputOntology = 1 ;
-string outputFile = 2 ;
 }
 
 //Define a message to hold the predicted price

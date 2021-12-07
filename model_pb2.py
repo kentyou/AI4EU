@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0bmodel.proto\"5\n\x08\x46\x65\x61tures\x12\x15\n\rinputOntology\x18\x01 \x01(\t\x12\x12\n\noutputFile\x18\x02 \x01(\t\"\x17\n\x06Result\x12\r\n\x05terms\x18\x01 \x01(\t23\n\x06Search\x12)\n\x13getSimilarTopicsFor\x12\t.Features\x1a\x07.Resultb\x06proto3'
+  serialized_pb=b'\n\x0bmodel.proto\"!\n\x08\x46\x65\x61tures\x12\x15\n\rinputOntology\x18\x01 \x01(\t\"\x17\n\x06Result\x12\r\n\x05terms\x18\x01 \x01(\t23\n\x06Search\x12)\n\x13getSimilarTopicsFor\x12\t.Features\x1a\x07.Resultb\x06proto3'
 )
 
 
@@ -40,13 +40,6 @@ _FEATURES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='outputFile', full_name='Features.outputFile', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -60,7 +53,7 @@ _FEATURES = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=15,
-  serialized_end=68,
+  serialized_end=48,
 )
 
 
@@ -91,8 +84,8 @@ _RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=70,
-  serialized_end=93,
+  serialized_start=50,
+  serialized_end=73,
 )
 
 DESCRIPTOR.message_types_by_name['Features'] = _FEATURES
@@ -122,8 +115,8 @@ _SEARCH = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=95,
-  serialized_end=146,
+  serialized_start=75,
+  serialized_end=126,
   methods=[
   _descriptor.MethodDescriptor(
     name='getSimilarTopicsFor',

@@ -15,7 +15,7 @@ class SearchServicer(model_pb2_grpc.SearchServicer):
         # define the buffer of the response :
         response = model_pb2.Result()
         # get the value of the response by calling the desired function :
-        response.terms = sm.getSimilarTopicsFor(request.inputOntology, request.outputFile)
+        response.terms = sm.getSimilarTopicsFor(request.inputOntology)
         return response
 
 
