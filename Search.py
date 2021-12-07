@@ -14,7 +14,7 @@ predefined_terms = predefined_mobility_terms + predefined_city_terms
 
 # load google embeddings
 news_path = 'https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz'  # 'GoogleNews-vectors-negative300.bin'
-embeddings_index = KeyedVectors.load_word2vec_format(news_path, binary=True, limit=5000)
+embeddings_index = KeyedVectors.load_word2vec_format(news_path, binary=True)
 
 
 def getSimilarTopicsFor(inputOntology, outputFile):
