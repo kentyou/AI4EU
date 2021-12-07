@@ -2,3 +2,5 @@ Levenshtein
 gensim
 owlready2
 smart_open[http]
+protobuf>=3.5.0.post1
+grpcio-tools

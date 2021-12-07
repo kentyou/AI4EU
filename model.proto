@@ -1,0 +1,19 @@
+//Define the used version of proto?
+syntax = "proto3" ;
+
+//Define a message to hold the features input by the client
+
+message Features {
+string inputOntology = 1 ;
+string outputFile = 2 ;
+}
+
+//Define a message to hold the predicted price
+message Result {
+string terms = 1 ;
+}
+
+//Define the service
+service Search {
+rpc getSimilarTopicsFor(Features) returns (Result);
+}
